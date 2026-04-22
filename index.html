@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Male Allyship Project &mdash; A Resource for Men Supporting Women in Technology</title>
+<meta name="description" content="A working resource for men in technology who want to move from good intentions to meaningful action in supporting women in the field. Curated by Mark Garcia, Co-Lead of the Austin Women in Tech Impact Network.">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #3d3d3d;
+    --paper: #fdfcf8;
+    --paper-alt: #f5f2ea;
+    --paper-deep: #ebe5d5;
+    --accent: #7a2e2e;
+    --accent-soft: #a14545;
+    --accent-warm: #c48b5a;
+    --rule: #c9c2b2;
+    --muted: #6b6458;
+    --shadow: rgba(0,0,0,0.08);
+    --shadow-lg: rgba(0,0,0,0.14);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    font-size: 18px;
+  }
+  .sans {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-soft); }
+
+  /* ============ NAV ============ */
+  .site-nav {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  .site-nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .site-nav a {
+    color: var(--paper);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+  }
+  .site-nav a:hover { opacity: 1; }
+  .site-nav .brand {
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 28px;
+  }
+  .site-nav ul a { font-size: 13px; }
+
+  /* ============ HERO ============ */
+  .hero {
+    background: linear-gradient(180deg, var(--paper-alt) 0%, var(--paper) 100%);
+    padding: 96px 32px 80px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .eyebrow {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .hero h1 {
+    font-size: 52px;
+    line-height: 1.08;
+    margin: 0 0 24px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .hero .lede {
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0 auto 36px;
+    max-width: 620px;
+  }
+  .cta-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    border: 2px solid var(--ink);
+  }
+  .btn-primary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--paper);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border: 2px solid var(--ink);
+  }
+  .btn-secondary:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  /* ============ SECTIONS ============ */
+  section {
+    padding: 80px 32px;
+  }
+  .section-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .section-inner.narrow {
+    max-width: 760px;
+  }
+  .section-header {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+  .section-header.left {
+    text-align: left;
+  }
+  .section-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-size: 36px;
+    line-height: 1.15;
+    margin: 0 0 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .section-sub {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .section-header.left .section-sub { margin: 0; }
+
+  .alt-bg { background: var(--paper-alt); }
+  .deep-bg {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .deep-bg .section-title, .deep-bg .section-sub { color: var(--paper); }
+  .deep-bg .section-label { color: var(--accent-warm); }
+
+  /* ============ MISSION ============ */
+  .mission-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+  .mission-text p { margin: 0 0 24px; }
+  .mission-text p:first-child::first-letter {
+    float: left;
+    font-size: 64px;
+    line-height: 54px;
+    padding: 4px 10px 0 0;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  /* ============ RESEARCH CARD ============ */
+  .research-card {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    padding: 48px 44px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+  }
+  .research-card-text h3 {
+    font-size: 26px;
+    margin: 0 0 12px;
+    line-height: 1.25;
+  }
+  .research-card-meta {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .research-card p {
+    margin: 0 0 16px;
+    font-size: 17px;
+    color: var(--ink-soft);
+  }
+  .research-card-stats {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .research-card-stats span strong {
+    color: var(--ink);
+    font-size: 20px;
+    font-family: "Iowan Old Style", Georgia, serif;
+    display: block;
+  }
+
+  /* ============ BOOKS ============ */
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+  }
+  .book {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 24px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .book:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px var(--shadow-lg);
+  }
+  .book-cover-wrap {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    background: linear-gradient(135deg, var(--paper-deep) 0%, var(--rule) 100%);
+    margin-bottom: 22px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  }
+  .book-cover-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .book-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 4px;
+  }
+  .book-subtitle {
+    font-size: 14.5px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+  .book-author {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .book-desc {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    flex-grow: 1;
+    margin-bottom: 18px;
+  }
+  .book-connection {
+    font-size: 13px;
+    color: var(--accent);
+    font-style: italic;
+    margin-bottom: 14px;
+    padding: 8px 12px;
+    background: rgba(122,46,46,0.06);
+    border-left: 3px solid var(--accent);
+  }
+  .book-review-link {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    border-top: 1px solid var(--rule);
+    padding-top: 14px;
+    opacity: 0.65;
+    pointer-events: none;
+  }
+  .book-review-link::after {
+    content: " \2192";
+  }
+  .book.has-review .book-review-link {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ============ EVENTS ============ */
+  .events-split {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+  }
+  .event-col h3 {
+    font-size: 24px;
+    margin: 0 0 8px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .event-col-sub {
+    font-size: 14px;
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  .event-card {
+    background: var(--paper);
+    border-left: 4px solid var(--accent);
+    padding: 20px 24px;
+    margin-bottom: 18px;
+  }
+  .event-card.featured {
+    border-left: none;
+    padding: 0;
+    background: var(--paper);
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+    margin-bottom: 24px;
+  }
+  .event-card.featured .event-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: var(--paper-deep);
+  }
+  .event-card.featured .event-body {
+    padding: 22px 26px 24px;
+    border-left: 4px solid var(--accent);
+  }
+  .event-card.placeholder {
+    border-left-color: var(--rule);
+    background: transparent;
+    border: 2px dashed var(--rule);
+    text-align: center;
+    padding: 28px 22px;
+    color: var(--muted);
+    font-style: italic;
+    font-size: 14px;
+  }
+  .event-date {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .event-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+  .event-desc {
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+  }
+  .event-desc:last-child { margin-bottom: 0; }
+  .event-speakers {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 1px solid var(--rule);
+  }
+  .event-speakers strong { color: var(--ink); }
+
+  /* ============ BIO ============ */
+  .bio-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .bio-aside {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 28px 24px;
+    border-radius: 2px;
+  }
+  .bio-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-warm) 100%);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--paper);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+  .bio-contacts {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .bio-contacts a {
+    color: var(--accent-warm);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .bio-contacts a:hover { text-decoration: underline; }
+  .email-reveal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(196,139,90,0.10);
+    border: 1px solid rgba(196,139,90,0.35);
+    color: var(--accent-warm);
+    padding: 6px 12px;
+    border-radius: 2px;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    word-break: break-all;
+  }
+  .email-reveal-btn:hover,
+  .email-reveal-btn:focus-visible {
+    background: rgba(196,139,90,0.22);
+    border-color: var(--accent-warm);
+    color: var(--paper);
+    outline: none;
+  }
+  .email-reveal-btn svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+  .email-reveal-btn.is-revealed {
+    border-style: dashed;
+    cursor: text;
+    user-select: text;
+  }
+  .email-reveal-btn .email-reveal-btn-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .bio-contacts-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 16px;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+  .bio-contacts-label:first-child { margin-top: 0; }
+
+  .bio-main h3 {
+    font-size: 30px;
+    margin: 0 0 6px;
+    color: var(--paper);
+    font-weight: 700;
+  }
+  .bio-main .bio-role {
+    font-size: 17px;
+    color: var(--accent-warm);
+    margin-bottom: 28px;
+    font-style: italic;
+  }
+  .bio-main p {
+    color: rgba(253,252,248,0.85);
+    font-size: 17px;
+    margin: 0 0 18px;
+  }
+
+  .bio-section-title {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    font-weight: 700;
+    margin: 36px 0 14px;
+  }
+
+  .career-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .career-list li {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 15px;
+    color: rgba(253,252,248,0.85);
+  }
+  .career-list li:last-child { border-bottom: none; }
+  .career-years {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--accent-warm);
+    font-weight: 600;
+    padding-top: 2px;
+  }
+  .career-role {
+    color: rgba(253,252,248,0.95);
+  }
+  .career-role strong {
+    color: var(--paper);
+  }
+
+  .writings-list, .community-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .writings-list li, .community-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 15px;
+    color: rgba(253,252,248,0.85);
+  }
+  .writings-list li:last-child, .community-list li:last-child { border-bottom: none; }
+  .writings-list a {
+    color: var(--paper);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .writings-list a:hover {
+    color: var(--accent-warm);
+    text-decoration: underline;
+  }
+  .community-list strong { color: var(--paper); }
+
+  /* ============ WGU CALLOUT ============ */
+  .wgu-note {
+    background: rgba(196,139,90,0.12);
+    border-left: 3px solid var(--accent-warm);
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 15px;
+    font-style: italic;
+    color: rgba(253,252,248,0.9);
+  }
+  .wgu-note strong {
+    color: var(--accent-warm);
+    font-style: normal;
+  }
+
+  /* ============ FOOTER ============ */
+  footer.site-footer {
+    background: var(--ink);
+    color: rgba(253,252,248,0.6);
+    padding: 40px 32px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  footer.site-footer a {
+    color: var(--accent-warm);
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  footer.site-footer a:hover { text-decoration: underline; }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 860px) {
+    .hero { padding: 72px 24px 60px; }
+    .hero h1 { font-size: 36px; }
+    .hero .lede { font-size: 18px; }
+    section { padding: 64px 24px; }
+    .section-title { font-size: 28px; }
+    .research-card {
+      grid-template-columns: 1fr;
+      padding: 36px 28px;
+      gap: 24px;
+    }
+    .events-split {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    .bio-layout {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+    .bio-photo { max-width: 200px; }
+    .bio-aside { text-align: center; }
+    .career-list li {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+    .site-nav ul { gap: 18px; }
+    .site-nav ul a { font-size: 12px; }
+  }
+  @media (max-width: 560px) {
+    .site-nav-inner { flex-direction: column; gap: 10px; }
+    .hero h1 { font-size: 30px; }
+    .book-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <div class="site-nav-inner">
+    <a href="index.html" class="brand">Women in Tech and The Male Allyship Project</a>
+    <ul>
+      <li><a href="#mission">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#reading">Reading</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#bio">About Mark</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">A Working Resource for Men in Technology</div>
+    <h1>Good intentions aren't enough.<br><em>Allyship is a practice.</em></h1>
+    <p class="lede">A curated set of research, reading, and reflections for men who want to move from wanting to support women in technology &mdash; to actually doing the work.</p>
+    <div class="cta-row">
+      <a href="research.html" class="btn btn-primary">Read the Research</a>
+      <a href="#mission" class="btn btn-secondary">Why This Site</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION ============ -->
+<section id="mission">
+  <div class="section-inner narrow">
+    <div class="section-header left">
+      <div class="section-label">About this Project</div>
+      <h2 class="section-title">I built this to answer a question I kept asking myself.</h2>
+    </div>
+    <div class="mission-text">
+      <p>I'm Mark Garcia, and in September 2025 I became co-lead of the Austin Women in Tech Impact Network. The network convenes quarterly, draws a hundred or more Austin technologists to each meeting, and is sponsored by Western Governors University &mdash; where I earned my own degree in Business Administration and IT Management.</p>
+      <p>For most of our history, our panels have featured prominent women advocating for women. That work is foundational, and it continues. But one number kept bothering me: roughly one in ten of our attendees is a man. If allyship is going to be anything more than a conversation among the already-convinced, we need the rest of the room.</p>
+      <p>This site is where I'm collecting what I'm learning. The research on what actually works. The books I'm reading and the notes I'm taking. The events our Impact Network has hosted and the ones coming up. If you're a man who wants to do this work better &mdash; or someone trying to bring a man you respect, is a friend, or work with into the conversation &mdash; I hope you find something useful here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED RESEARCH ============ -->
+<section id="research" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">The Research Brief</div>
+      <h2 class="section-title">Building Male Allyship in Austin Technology</h2>
+      <p class="section-sub">A scholarly analysis of male allyship programming nationally and a proposal that shaped our April 2026 quarterly meeting.</p>
+    </div>
+    <div class="research-card">
+      <div class="research-card-text">
+        <div class="research-card-meta">Volume I, No. 1 &middot; March 2026</div>
+        <h3>An Evidence-Based Strategy for the April 2026 Quarterly Meeting</h3>
+        <p>Why 97% of men say they want to close gender gaps at work &mdash; and why only about 10% of them show up at events like ours. Drawing on national programming from 2022&ndash;2025 and Austin-specific research, this brief proposes a panel composition, agenda, and recruitment strategy designed to lift male attendance from 10% to 33%.</p>
+        <div class="research-card-stats">
+          <span><strong>8</strong> cross-case findings</span>
+          <span><strong>7</strong> Austin panelists profiled</span>
+          <span><strong>22+</strong> cited sources</span>
+        </div>
+      </div>
+      <div>
+        <a href="research.html" class="btn btn-primary">Read the brief &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECOMMENDED READING ============ -->
+<section id="reading">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Recommended Reading</div>
+      <h2 class="section-title">Books I'm Working Through</h2>
+      <p class="section-sub">The short list of books that have most shaped how I think about this work. I'll publish my own notes and takeaways for each as I go.</p>
+    </div>
+    <div class="book-grid">
+
+      <article class="book">
+        <div class="book-cover-wrap">
+          <img src="images/good_guys.jpg"
+               alt="Cover of Good Guys by Brad Johnson and David Smith"
+               loading="lazy">
+        </div>
+        <h3 class="book-title">Good Guys</h3>
+        <p class="book-subtitle">How Men Can Be Better Allies for Women in the Workplace</p>
+        <p class="book-author">W. Brad Johnson &amp; David G. Smith</p>
+        <p class="book-desc">Written by a Naval Academy psychologist and a Johns Hopkins sociologist. Widely cited as the foundational text for practical male allyship.</p>
+        <a href="#" class="book-review-link">My notes coming soon</a>
+      </article>
+
+      <article class="book">
+        <div class="book-cover-wrap">
+          <img src="images/better_allies.jpg"
+               alt="Cover of Better Allies, 2nd Edition, by Karen Catlin"
+               loading="lazy">
+        </div>
+        <h3 class="book-title">Better Allies <span style="font-weight:500;color:var(--muted);font-size:16px;">(2nd Ed.)</span></h3>
+        <p class="book-subtitle">Everyday Actions to Create Inclusive, Engaging Workplaces</p>
+        <p class="book-author">Karen Catlin</p>
+        <p class="book-desc">Catlin draws on 25 years as a tech VP at Adobe, and this fully revised second edition adds dozens of new scenarios. Concrete and tactical where a lot of allyship writing stays abstract.</p>
+        <a href="#" class="book-review-link">My notes coming soon</a>
+      </article>
+
+      <article class="book">
+        <div class="book-cover-wrap">
+          <img src="images/some_assembly_required.jpg"
+               alt="Cover of Some Assembly Required: A Networking Guide for Women, Second Edition, by Marny Lifshen and Thom Singer"
+               loading="lazy">
+        </div>
+        <h3 class="book-title">Some Assembly Required <span style="font-weight:500;color:var(--muted);font-size:16px;">(2nd Ed.)</span></h3>
+        <p class="book-subtitle">A Networking Guide for Women</p>
+        <p class="book-author">Marny Lifshen &amp; Thom Singer</p>
+        <p class="book-desc">Written by an Austin marketing consultant and an Austin speaker-CEO. The book is grounded in the insight that networking works differently for women, and provides practical tools that adapt to individual styles rather than forcing a single script.</p>
+        <div class="book-connection">Thom Singer was our April 2026 fireside chat speaker &mdash; the book is how I got to know his work.</div>
+        <a href="#" class="book-review-link">My notes coming soon</a>
+      </article>
+
+      <article class="book">
+        <div class="book-cover-wrap">
+          <img src="images/why_women.jpeg"
+               alt="Cover of WHY WOMEN: The Leadership Imperative to Advancing Women and Engaging Men by Jeffery Tobias Halter"
+               loading="lazy">
+        </div>
+        <h3 class="book-title">Why Women</h3>
+        <p class="book-subtitle">The Leadership Imperative to Advancing Women and Engaging Men</p>
+        <p class="book-author">Jeffery Tobias Halter</p>
+        <p class="book-desc">Halter is the former Director of Diversity Strategy at The Coca-Cola Company and founder of YWomen. His &ldquo;Father of Daughter Initiative&rdquo; offers one of the clearest entry points I've seen for male allyship, and the book frames the work in concrete business terms for skeptical male executives.</p>
+        <a href="#" class="book-review-link">My notes coming soon</a>
+      </article>
+
+      <article class="book">
+        <div class="book-cover-wrap">
+          <img src="images/athena_rising.jpg"
+               alt="Cover of Athena Rising by Brad Johnson and David Smith"
+               loading="lazy">
+        </div>
+        <h3 class="book-title">Athena Rising</h3>
+        <p class="book-subtitle">How and Why Men Should Mentor Women</p>
+        <p class="book-author">W. Brad Johnson &amp; David G. Smith</p>
+        <p class="book-desc">The predecessor to <em>Good Guys</em>, focused on the mentorship-to-sponsorship pipeline that most women in tech report is where they lose ground.</p>
+        <a href="#" class="book-review-link">My notes coming soon</a>
+      </article>
+
+      <article class="book">
+        <div class="book-cover-wrap">
+          <img src="images/invisible_women.jpeg"
+               alt="Cover of Invisible Women by Caroline Criado Perez"
+               loading="lazy">
+        </div>
+        <h3 class="book-title">Invisible Women</h3>
+        <p class="book-subtitle">Data Bias in a World Designed for Men</p>
+        <p class="book-author">Caroline Criado Perez</p>
+        <p class="book-desc">How a world built on male-default data fails women &mdash; in medicine, safety, product design, and code. Winner of the FT &amp; McKinsey Business Book of the Year. Essential reading for anyone building technology that real humans use.</p>
+        <a href="#" class="book-review-link">My notes coming soon</a>
+      </article>
+
+      <article class="book">
+        <div class="book-cover-wrap">
+          <img src="images/the_authority_gap.jpg"
+               alt="Cover of The Authority Gap by Mary Ann Sieghart"
+               loading="lazy">
+        </div>
+        <h3 class="book-title">The Authority Gap</h3>
+        <p class="book-subtitle">Why Women Are Still Taken Less Seriously Than Men, and What We Can Do About It</p>
+        <p class="book-author">Mary Ann Sieghart</p>
+        <p class="book-desc">Backed by research across professions. Particularly useful for understanding meeting dynamics and whose ideas get credit. Includes interviews with Hillary Clinton, Janet Yellen, and Julia Gillard.</p>
+        <a href="#" class="book-review-link">My notes coming soon</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVENTS ============ -->
+<section id="events" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Impact Network Events</div>
+      <h2 class="section-title">Past &amp; Upcoming</h2>
+      <p class="section-sub">The Austin Women in Tech Impact Network convenes quarterly. Each meeting draws 100+ Austin technologists to a panel discussion or fireside chat on advancing women in technology.</p>
+    </div>
+
+    <div class="events-split">
+
+      <div class="event-col">
+        <h3>Past Events</h3>
+        <p class="event-col-sub">Archive of Impact Network quarterly meetings.</p>
+
+        <div class="event-card featured">
+          <img class="event-image"
+               src="images/april-2026-fireside-chat.jpg"
+               alt="Austin Women in Tech Impactors Network Meeting: Fireside Chat on Male Allyship, with Mark Garcia and Thom Singer, April 9 2026 at The Texas Tribune"
+               loading="lazy">
+          <div class="event-body">
+            <div class="event-date">April 9, 2026 &middot; 11:30 AM &ndash; 2:00 PM CT</div>
+            <h4 class="event-title">Austin Women in Tech Impactors Network Meeting: Fireside Chat &mdash; Male Allyship</h4>
+            <p class="event-desc">A WGU-sponsored gathering at The Texas Tribune focused on advancing women in tech. The conversation explored the evolving Austin tech landscape and what it means for women in the industry, breaking down barriers and creating pathways for advancement, and the critical role of allyship in building a more inclusive ecosystem.</p>
+            <p class="event-desc">Background reading: <a href="research.html">the research brief that preceded this event</a>.</p>
+            <div class="event-speakers">
+              <strong>Speaker:</strong> Thom Singer, CSP &middot; CEO, Austin Technology Council<br>
+              <strong>Moderator:</strong> Mark Garcia &middot; Co-Lead, AWITIN<br>
+              <strong>Venue:</strong> The Texas Tribune &middot; 919 Congress Ave, Sixth Floor, Austin, TX 78701
+            </div>
+          </div>
+        </div>
+
+        <div class="event-card placeholder">
+          Earlier event recaps coming soon
+        </div>
+      </div>
+
+      <div class="event-col">
+        <h3>Upcoming</h3>
+        <p class="event-col-sub">What's next on the calendar.</p>
+
+        <div class="event-card placeholder">
+          Next quarterly meeting &middot; Details coming soon
+        </div>
+
+        <div class="event-card placeholder">
+          Topic and panel to be announced
+        </div>
+
+        <div class="event-card placeholder">
+          Topic and panel to be announced
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ BIO ============ -->
+<section id="bio" class="deep-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">About the Author</div>
+      <h2 class="section-title">Mark Garcia</h2>
+      <p class="section-sub">Senior technology leader, two-time startup acquiree, and&mdash;since September 2025&mdash;co-lead of the Austin Women in Tech Impact Network.</p>
+    </div>
+
+    <div class="bio-layout">
+
+      <aside class="bio-aside">
+        <div class="bio-photo">MG</div>
+        <div class="bio-contacts">
+          <div class="bio-contacts-label">Location</div>
+          <div>Austin, Texas</div>
+
+          <div class="bio-contacts-label">Email</div>
+          <div>
+            <button type="button" class="email-reveal-btn"
+                    data-c="3435386a292735342f2720293b2f38082e2b26"
+                    data-k="4b"
+                    aria-label="Reveal email address">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="m3 7 9 6 9-6"/>
+              </svg>
+              <span class="email-reveal-btn-label">Click to reveal</span>
+            </button>
+          </div>
+
+          <div class="bio-contacts-label">LinkedIn</div>
+          <div><a href="https://www.linkedin.com/in/wavecentral" target="_blank" rel="noopener">linkedin.com/in/wavecentral</a></div>
+        </div>
+      </aside>
+
+      <div class="bio-main">
+        <h3>A 26-year career in cloud, infrastructure, and platform engineering.</h3>
+        <p class="bio-role">Co-Lead, Austin Women in Tech Impact Network &middot; Since September 2025</p>
+
+        <p>I'm a senior management leader with more than two and a half decades of experience conceptualizing, architecting, and leading SaaS, IaaS, and PaaS platforms at global scale. Across Microsoft, IBM, Dell Technologies, Humana, and SHI International, I've built and managed infrastructure handling billions of data observations, hundreds of millions of dollars in budget, and teams spanning multiple continents. I've been part of two startup acquisitions &mdash; Farecast (to Microsoft) and Gravitant (to IBM) &mdash; and I'm currently working on a stealth project.</p>
+
+        <p>My interest in male allyship didn't begin as a professional project. It began as a personal one: noticing, over the course of a long career in technology, how often I was in rooms where the ratio was off, and how infrequently I understood what to do about it. Co-leading the Impact Network has been a way to take that question seriously.</p>
+
+        <div class="wgu-note">
+          <strong>WGU connection:</strong> I earned my Bachelor of Science in Business Administration and Information Technology Management from Western Governors University &mdash; the same institution that sponsors the Austin Women in Tech Impact Network. Walking into that sponsorship partnership as an alumnus has been an unexpected and welcome alignment.
+        </div>
+
+        <h4 class="bio-section-title">Career Highlights</h4>
+        <ul class="career-list">
+          <li>
+            <span class="career-years">2023&ndash;2025</span>
+            <span class="career-role"><strong>Principal Enterprise Architect</strong>, SHI International Corp.</span>
+          </li>
+          <li>
+            <span class="career-years">2021&ndash;2023</span>
+            <span class="career-role"><strong>Associate Director, IT Architecture &amp; Resiliency</strong>, Humana &mdash; led three teams building disaster recovery, resiliency, and cyber recovery architecture for 1,700+ business applications.</span>
+          </li>
+          <li>
+            <span class="career-years">2019&ndash;2021</span>
+            <span class="career-role"><strong>Director / Chief Architect, Infrastructure Capacity Planning &amp; Strategy</strong>, Dell Technologies &mdash; $175M+ budget; delivered 47% YoY capacity growth through ML-powered forecasting.</span>
+          </li>
+          <li>
+            <span class="career-years">2018&ndash;2019</span>
+            <span class="career-role"><strong>Head of Engineering &amp; Professional Services</strong>, SourceDay &mdash; grew team of 21 engineers; drove 41% EOY growth through two marquee product launches.</span>
+          </li>
+          <li>
+            <span class="career-years">2013&ndash;2018</span>
+            <span class="career-role"><strong>Director / Senior Manager / Chief Delivery Architect</strong>, IBM (via Gravitant acquisition) &mdash; led cloud operations and gateway services across 38 global data centers.</span>
+          </li>
+          <li>
+            <span class="career-years">2007&ndash;2011</span>
+            <span class="career-role"><strong>Director of Engineering Operations &amp; Senior SDE Lead</strong>, Microsoft (via Farecast acquisition) &mdash; scaled Bing Travel infrastructure across 1,300 servers and petabyte data stores.</span>
+          </li>
+          <li>
+            <span class="career-years">1997&ndash;2007</span>
+            <span class="career-role">Earlier roles at Farecast, Washington Mutual, NewSof Group, InfoSpace, Go2Net, and HyperMart.</span>
+          </li>
+        </ul>
+
+        <h4 class="bio-section-title">Community &amp; Service</h4>
+        <ul class="community-list">
+          <li><strong>President-Elect</strong>, Congregational Council &mdash; Triumphant Love Lutheran Church</li>
+          <li><strong>Delegate</strong>, Southwestern Texas Synod Assembly 2026</li>
+          <li><strong>Advisor</strong>, Central Texas Crime Stoppers (non-profit)</li>
+        </ul>
+
+        <h4 class="bio-section-title">Other Writing</h4>
+        <p style="margin-bottom: 14px; font-size: 15px; color: rgba(253,252,248,0.7); font-style: italic;">Not all of my writing is about allyship &mdash; these pieces range across work psychology, economics, and the craft beer scene.</p>
+        <ul class="writings-list">
+          <li><a href="https://www.linkedin.com/pulse/get-psyched-work-dose-hobbies-cure-mark-garcia/" target="_blank" rel="noopener">Get Psyched for Work: A Dose of Hobbies Is the Cure</a></li>
+          <li><a href="https://www.linkedin.com/pulse/needs-vs-wants-mark-garcia-k6nef/" target="_blank" rel="noopener">Needs vs Wants</a></li>
+          <li><a href="https://www.linkedin.com/pulse/craft-beer-slowdown-consolidation-mark-garcia/" target="_blank" rel="noopener">Craft Beer: Slowdown = Consolidation?</a></li>
+          <li><a href="https://www.linkedin.com/pulse/good-beer-bad-art-describing-flavors-mark-garcia/" target="_blank" rel="noopener">Good Beer Bad Beer: The Art of Describing Beer Flavors</a></li>
+        </ul>
+
+        <h4 class="bio-section-title">Recognition</h4>
+        <p style="font-size: 15px; color: rgba(253,252,248,0.85); margin-bottom: 0;">Microsoft Gold Star Award &middot; IBM Design Thinking Practitioner &middot; IBM Mentor</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>
+    <a href="index.html">Home</a> &middot;
+    <a href="research.html">Research</a> &middot;
+    <a href="#reading">Reading</a> &middot;
+    <a href="#events">Events</a> &middot;
+    <a href="#bio">About</a>
+  </p>
+  <p style="margin-top: 14px; opacity: 0.7;">&copy; 2026 Mark Garcia &middot; Women in Tech and The Male Allyship Project &middot; Austin, Texas</p>
+</footer>
+
+<script>
+// Click-to-reveal email. The address is stored as a reversed-byte hex string
+// XORed with a rolling key (base_key ^ position). No '@' or '.' appear anywhere
+// in the HTML source, so naive regex scrapers won't match an email pattern.
+(function () {
+  function decode(hex, baseKey) {
+    var bytesRev = [];
+    for (var i = 0; i < hex.length; i += 2) bytesRev.push(parseInt(hex.substr(i, 2), 16));
+    var bytes = bytesRev.reverse();
+    var out = '';
+    for (var j = 0; j < bytes.length; j++) {
+      out += String.fromCharCode(bytes[j] ^ (baseKey ^ (j & 0xFF)));
+    }
+    return out;
+  }
+
+  function reveal(btn) {
+    if (btn.classList.contains('is-revealed')) return;
+    var hex = btn.getAttribute('data-c');
+    var key = parseInt(btn.getAttribute('data-k'), 16);
+    if (!hex || isNaN(key)) return;
+    var addr = decode(hex, key);
+
+    // Replace the button content with a real mailto link now that we're in the clear.
+    btn.innerHTML = '';
+    var icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icon.setAttribute('viewBox', '0 0 24 24');
+    icon.setAttribute('fill', 'none');
+    icon.setAttribute('stroke', 'currentColor');
+    icon.setAttribute('stroke-width', '2');
+    icon.setAttribute('stroke-linecap', 'round');
+    icon.setAttribute('stroke-linejoin', 'round');
+    icon.setAttribute('aria-hidden', 'true');
+    icon.innerHTML = '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>';
+    btn.appendChild(icon);
+
+    var link = document.createElement('a');
+    link.href = 'mailto:' + addr;
+    link.textContent = addr;
+    link.style.color = 'inherit';
+    link.style.textDecoration = 'none';
+    btn.appendChild(link);
+
+    btn.classList.add('is-revealed');
+    btn.setAttribute('aria-label', 'Email: ' + addr);
+    // Strip the encoded data now that it has served its purpose.
+    btn.removeAttribute('data-c');
+    btn.removeAttribute('data-k');
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var btns = document.querySelectorAll('.email-reveal-btn');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function (e) {
+        if (e.target.tagName !== 'A') reveal(e.currentTarget);
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>

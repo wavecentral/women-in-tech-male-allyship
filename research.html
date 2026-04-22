@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Male Allyship in Austin Tech: Reflections from the April 2026 Quarterly Meeting</title>
+<meta name="description" content="A reflective brief on male allyship programming in technology, prepared as reading material for participants of the Austin Women in Tech Impact Network's April 2026 quarterly meeting.">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #3d3d3d;
+    --paper: #fdfcf8;
+    --paper-alt: #f5f2ea;
+    --accent: #7a2e2e;
+    --accent-soft: #a14545;
+    --rule: #c9c2b2;
+    --muted: #6b6458;
+    --shadow: rgba(0,0,0,0.08);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    font-size: 18px;
+  }
+  .site-nav {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  .site-nav-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .site-nav a {
+    color: var(--paper);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+  }
+  .site-nav a:hover { opacity: 1; }
+  .site-nav .brand {
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  article {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 32px 96px;
+  }
+  .masthead {
+    text-align: center;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+  }
+  .journal-line {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  h1 .subtitle {
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin-top: 12px;
+    letter-spacing: 0;
+  }
+  .byline {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 16px;
+  }
+  .byline strong { color: var(--ink); }
+  .abstract {
+    background: var(--paper-alt);
+    border-left: 4px solid var(--accent);
+    padding: 24px 28px;
+    margin: 0 0 48px;
+    font-size: 16px;
+  }
+  .abstract-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .keywords {
+    font-size: 14px;
+    margin-top: 16px;
+    color: var(--ink-soft);
+  }
+  .keywords strong { color: var(--ink); }
+  .toc {
+    border: 1px solid var(--rule);
+    padding: 24px 28px;
+    margin-bottom: 56px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+  }
+  .toc-title {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .toc ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .toc ol ol {
+    font-size: 13px;
+    color: var(--ink-soft);
+    padding-left: 18px;
+    margin-top: 4px;
+  }
+  .toc li { margin: 4px 0; }
+  .toc a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .toc a:hover { color: var(--accent); text-decoration: underline; }
+  h2 {
+    font-size: 26px;
+    margin-top: 64px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 8px;
+  }
+  h2 .section-num {
+    color: var(--accent);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    letter-spacing: 0.15em;
+    margin-bottom: 6px;
+  }
+  h3 {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  h4 {
+    font-size: 17px;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--accent);
+    font-style: italic;
+  }
+  p { margin: 0 0 18px; }
+  p.lead {
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+  }
+  .dropcap::first-letter {
+    float: left;
+    font-size: 64px;
+    line-height: 54px;
+    padding: 4px 10px 0 0;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 24px 0;
+    padding: 4px 24px;
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+  blockquote cite {
+    display: block;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 8px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .finding-box {
+    background: var(--paper-alt);
+    border-radius: 2px;
+    padding: 24px 28px;
+    margin: 28px 0;
+  }
+  .finding-box .finding-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .finding-box h4 {
+    margin-top: 0;
+    color: var(--ink);
+    font-style: normal;
+  }
+  .stat-callout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 32px 0;
+  }
+  .stat {
+    flex: 1;
+    min-width: 180px;
+    padding: 20px;
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    border-radius: 2px;
+  }
+  .stat-number {
+    font-size: 38px;
+    font-weight: 700;
+    color: #e8c88a;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    opacity: 0.85;
+    line-height: 1.4;
+  }
+  .stat-cite {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(232,200,138,0.25);
+    font-style: italic;
+  }
+  .case-study {
+    border: 1px solid var(--rule);
+    padding: 28px 32px;
+    margin: 32px 0;
+    background: #fffef9;
+  }
+  .case-study h4 {
+    margin-top: 0;
+    font-style: normal;
+    color: var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+  }
+  .case-study-meta {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .case-study-meta strong { color: var(--ink); }
+  .panelist {
+    border-left: 3px solid var(--rule);
+    padding-left: 20px;
+    margin: 28px 0;
+  }
+  .panelist .name {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .panelist .title {
+    font-size: 14px;
+    color: var(--muted);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin-bottom: 14px;
+  }
+  .panelist h5 {
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin: 16px 0 6px;
+    font-weight: 700;
+  }
+  .tier-marker {
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--accent);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  ul, ol { padding-left: 24px; margin: 0 0 18px; }
+  li { margin: 6px 0; }
+  .agenda-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+  }
+  .agenda-table th, .agenda-table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .agenda-table th {
+    background: var(--paper-alt);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 700;
+  }
+  .agenda-table td:first-child {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--accent);
+    font-size: 14px;
+  }
+  .author-note {
+    background: #fef9e8;
+    border: 1px solid #e8d9a0;
+    padding: 20px 24px;
+    margin: 32px 0;
+    font-size: 15px;
+    border-radius: 2px;
+  }
+  .author-note-label {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8a6d1a;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .section-divider {
+    text-align: center;
+    margin: 48px 0;
+    color: var(--rule);
+    font-size: 20px;
+    letter-spacing: 0.8em;
+  }
+  .references {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .references ol { padding-left: 24px; }
+  .references li {
+    margin: 10px 0;
+    color: var(--ink-soft);
+    padding-left: 4px;
+  }
+  .references li a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-word;
+  }
+  .references li a:hover { text-decoration: underline; }
+  footer.article-footer {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 2px solid var(--ink);
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0.04em;
+  }
+  .back-to-top {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .back-to-top:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    body { font-size: 17px; }
+    article { padding: 40px 22px 72px; }
+    h1 { font-size: 26px; }
+    h1 .subtitle { font-size: 17px; }
+    h2 { font-size: 22px; }
+    .stat-number { font-size: 30px; }
+    .site-nav-inner { padding: 0 22px; }
+  }
+  @media print {
+    .site-nav { display: none; }
+    body { background: white; font-size: 11pt; }
+    article { padding: 0; max-width: none; }
+    h2 { page-break-before: auto; }
+    .case-study, .finding-box { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <div class="site-nav-inner">
+    <a href="index.html" class="brand">Women in Tech and The Male Allyship Project</a>
+    <a href="index.html">&larr; Home</a>
+  </div>
+</nav>
+
+<article id="top">
+
+  <header class="masthead">
+    <div class="journal-line">Austin Women in Tech Impact Network &middot; Research Brief &middot; Volume I, No. 1</div>
+    <h1>
+      Building Male Allyship in Austin Technology
+      <span class="subtitle">Reflections from the April 2026 Quarterly Meeting</span>
+    </h1>
+    <div class="byline">
+      Prepared by <strong>Mark Garcia</strong>, Co-Lead, Austin Women in Tech Impact Network<br>
+      Originally drafted March 2026 &middot; Revised for participants, April 2026
+    </div>
+  </header>
+
+  <section class="abstract">
+    <div class="abstract-label">Abstract</div>
+    <p>This brief was originally prepared by the co-lead of the Austin Women in Tech Impact Network to inform the design of the April 2026 quarterly meeting, which experimentally featured an all-male presence exploring allyship, sponsorship, and the active promotion of women in technology. The Network's prior audience composition averaged roughly ten women for every one man (10:1); the meeting set an aspirational target of 10:5. This revised version, prepared as reading material for participants and the broader community, synthesizes findings from national male allyship programming between 2022 and 2025, analyzes strategies that have successfully increased male attendance at gender-focused technology events, and offers a typology of male allies in technology drawn from documented Austin examples. The analysis draws on published research from Catalyst, the Integrating Women Leaders Foundation, the Society of Women Engineers, AnitaB.org, and behavioral-science surveys of male attendance patterns at diversity events. It closes with a description of the meeting as it was actually run&mdash;a moderated fireside chat with Thom Singer, CEO of the Austin Technology Council&mdash;and the recommended reading list distributed to participants.</p>
+    <div class="keywords"><strong>Keywords:</strong> male allyship, women in technology, Austin tech ecosystem, gender equity, diversity and inclusion, event design, panel programming</div>
+  </section>
+
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#introduction">Introduction &amp; Research Questions</a></li>
+      <li><a href="#methodology">Research Approach</a></li>
+      <li><a href="#national-programs">Part I. National Male Allyship Programming (2022&ndash;2025)</a>
+        <ol>
+          <li><a href="#iwl">The IWL ALL IN Allyship Summit</a></li>
+          <li><a href="#wim">Women in Manufacturing: Men as Allies Conference</a></li>
+          <li><a href="#ghc">Grace Hopper Celebration Male Allies Panels</a></li>
+          <li><a href="#rockit">Louisville Women in Technology Conference</a></li>
+          <li><a href="#swe">SWE HeForSWE Initiative</a></li>
+          <li><a href="#university">University-Based Ally Programs</a></li>
+        </ol>
+      </li>
+      <li><a href="#austin-panelists">Part II. A Typology of Male Allies in Austin Technology</a></li>
+      <li><a href="#success-factors">Part III. Cross-Case Success Factors</a></li>
+      <li><a href="#recommendation">Part IV. The Meeting As Run</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+      <li><a href="#references">References &amp; Source Notes</a></li>
+    </ol>
+  </nav>
+
+  <!-- INTRODUCTION -->
+  <section id="introduction">
+    <h2><span class="section-num">Section 1</span>Introduction &amp; Research Questions</h2>
+
+    <p class="lead dropcap">The Austin Women in Tech Impact Network convenes quarterly gatherings of a hundred or more technologists, educators, and industry leaders in partnership with local leaders of Western Governors University (WGU), the Network's sponsor. For most of the Network's history, panels have centered the voices of prominent women advocating for women. This has been, and remains, foundational work. But the demographics of recent audiences tell a harder story: roughly one in ten attendees is a man. If allyship is to be anything more than an internal conversation among women, the other half of the workforce needs to be in the room.</p>
+
+    <p>For April 2026, the Network's planning committee&mdash;the two co-leads and local leaders from WGU&mdash;committed to an experiment. Rather than recruiting the usual panel of female advocates, the meeting featured an all-male presence: a fireside chat anchored by Thom Singer, CEO of the Austin Technology Council, in conversation with co-lead Mark Garcia. The aspirational target was a 10:5 gender ratio in the audience, a fivefold increase in male participation, and&mdash;more importantly&mdash;a shift in the conversation from awareness to action.</p>
+
+    <p>This brief was prepared in March 2026 to ground that experiment in evidence rather than intuition, and has been lightly revised for distribution to participants and the broader community. Four questions framed the inquiry:</p>
+
+    <ol>
+      <li>What male allyship programs in the United States have produced measurable increases in male participation, and what can be learned from their design?</li>
+      <li>Which topics, panel formats, and session structures have generated the strongest engagement and post-event behavior change?</li>
+      <li>Which patterns of male allyship in technology recur often enough to be useful as a typology, and what do those patterns look like in Austin?</li>
+      <li>What specific interventions&mdash;invitation strategy, framing, timing, venue&mdash;are most likely to triple male attendance at a local event of this kind?</li>
+    </ol>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section id="methodology">
+    <h2><span class="section-num">Section 2</span>Research Approach</h2>
+
+    <p>This brief draws on primary and secondary sources covering male allyship events, conferences, research studies, and local Austin coverage from 2018 through early 2026. Events held between 2022 and 2025 received priority weight as most representative of current programming norms. For each event reviewed, an attempt was made to document the organizing body, panelists, agenda structure, sponsors, attendance demographics, published outcomes, and attendee feedback. Published event descriptions were supplemented with research literature on male participation in gender-focused events&mdash;notably the behavioral-science survey by Wallaert, Catalyst's annual research on men and gender inclusion, and the Integrating Women Leaders Foundation's State of Allyship-in-Action research study published through Harvard Business Review.</p>
+
+    <p>For the Austin analysis, public records, press coverage, and nonprofit board listings were searched for male executives and contributors associated with Austin-based women-in-tech organizations including DivInc, Girlstart, Latinas in Tech Austin, Latinitas, Austin Women in Technology, and the Austin Technology Council. It is worth noting openly that public documentation of male allies in Austin is sparse relative to documentation of female leaders in the same organizations&mdash;a data gap treated here as a finding in its own right, and one that shaped the typology developed in Part II.</p>
+
+    <div class="author-note">
+      <div class="author-note-label">Positionality</div>
+      <p style="margin:0;">This brief was authored by a co-lead of the Network with a vested interest in the outcome of the April 2026 experiment. That stake should be visible to the reader rather than hidden. Where the text moves from describing the field to making choices about the Network's program, those choices reflect the planning committee's collective judgment and are open to challenge. Readers from outside the Impact Network are welcome to adapt the framework to their own contexts.</p>
+    </div>
+  </section>
+
+  <!-- PART I. NATIONAL PROGRAMS -->
+  <section id="national-programs">
+    <h2><span class="section-num">Section 3 &middot; Part I</span>National Male Allyship Programming, 2022&ndash;2025</h2>
+
+    <p>The landscape of male allyship programming has matured considerably over the past three years. Where earlier events often stopped at awareness-building&mdash;convincing men that a gender gap exists&mdash;the most effective contemporary programs have moved toward skill-building, scenario practice, and public accountability. Six programs stood out in the review as particularly instructive.</p>
+
+    <div class="stat-callout">
+      <div class="stat">
+        <div class="stat-number">97%</div>
+        <div class="stat-label">of men say they want to close gender gaps at work</div>
+        <div class="stat-cite">Catalyst, 2025</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">40%</div>
+        <div class="stat-label">of male event attendees cite a personal invitation as the deciding factor</div>
+        <div class="stat-cite">Wallaert, #WhyMenAttend</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">2&times;</div>
+        <div class="stat-label">men rate themselves as active allies at roughly twice the rate women experience them as such</div>
+        <div class="stat-cite">IWL Foundation, 2022</div>
+      </div>
+    </div>
+
+    <h3 id="iwl">3.1 The IWL ALL IN Allyship Summit</h3>
+
+    <div class="case-study">
+      <h4>IWL ALL IN Virtual Allyship Summit (2022&ndash;2024)</h4>
+      <div class="case-study-meta">
+        <strong>Organizer:</strong> Integrating Women Leaders Foundation &middot;
+        <strong>Format:</strong> Day-long virtual summit (6.5 hrs) &middot;
+        <strong>Presenting Sponsor (2024):</strong> Amazon Web Services
+      </div>
+
+      <h5 style="margin-top:0;">Panel Composition</h5>
+      <p>The inaugural 2022 summit opened with Stedman Graham's keynote on "Identity Leadership and the Allyship Journey" and featured a 90-minute State of Allyship panel built around Dr. Brad Johnson and Dr. David Smith, former U.S. Naval officers and co-authors of <em>Good Guys: How Men Can Be Better Allies for Women in the Workplace</em>. Jeffrey Tobias Halter (CEO, YWomen; author of <em>WHY WOMEN: The Leadership Imperative</em>) co-presented the foundational session, with Robert Lescano of Amazon Web Services on the closing panel. The 2024 edition added Dave Lavanty (Vice President, AWS ProServe Americas) and Eric Scott (Principal, ZS).</p>
+
+      <h5>Agenda Structure</h5>
+      <p>The day opened with keynote and foundational training, broke into four concurrent breakout tracks (women as allies for other women, allyship and intersectionality, LGBTQIA+ allyship, and allyship to introverts), returned to plenary for the 90-minute State of Allyship panel, and closed with 30 minutes of structured action planning.</p>
+
+      <h5>Evidentiary Backbone</h5>
+      <p>The summit's credibility rested on IWL's State of Allyship-in-Action research study, a survey of nearly 1,200 respondents (62% women, 36% men, 2% non-binary) across mid-market and large enterprise organizations, subsequently published through Harvard Business Review. The study's most cited finding&mdash;that men rate themselves as active allies roughly twice as often as women rate them as such&mdash;produced what might be called <em>productive discomfort</em>, reframing allyship from self-identification to measurable behavior.</p>
+
+      <h5>Lessons From This Case</h5>
+      <ul>
+        <li><strong>Research-grounded content</strong> gave the summit legitimacy that pure storytelling cannot.</li>
+        <li><strong>The virtual format</strong> lowered barriers for men uncertain about attending a women-focused event in public.</li>
+        <li><strong>Structured action planning</strong> in the final 30 minutes produced artifacts participants could carry back to their teams.</li>
+      </ul>
+    </div>
+
+    <h3 id="wim">3.2 Women in Manufacturing: Men as Allies Conference</h3>
+
+    <div class="case-study">
+      <h4>Men as Allies Conference (February 2025)</h4>
+      <div class="case-study-meta">
+        <strong>Organizer:</strong> Women in Manufacturing &middot;
+        <strong>Venue:</strong> Hilton Clearwater Beach Resort &amp; Spa, Florida &middot;
+        <strong>Dates:</strong> February 19&ndash;20, 2025 &middot;
+        <strong>Audience:</strong> Male directors and above, invitation-only
+      </div>
+
+      <h5 style="margin-top:0;">Panel Composition</h5>
+      <p>Rich Stinson (CEO and President, Southwire Company) delivered opening remarks; Barry Powell (President and Regional CEO, Siemens Electrical Products) delivered the closing keynote. Ashan Javed (President, MTE Corporation) anchored the central conversation with what is arguably the most quotable framing of male allyship to emerge from the entire review:</p>
+
+      <blockquote>
+        Meaningful allyship requires action, listening and learning. The future of manufacturing depends on harnessing all available talent, and that starts with male leaders stepping up as committed allies.
+        <cite>&mdash; Ashan Javed, President, MTE Corporation</cite>
+      </blockquote>
+
+      <h5>Design Choice Worth Emulating</h5>
+      <p>The organizers made a deliberate choice to target directors and above exclusively. This has two effects: it creates a room in which senior men can speak candidly without fear of being evaluated by their reports, and it concentrates the intervention at the level where organizational change is most likely to originate. For local quarterly programming of the kind the Network runs, this suggests reserving a small number of seats for mid-level managers and individual contributors by explicit invitation, rather than opening registration to everyone and hoping for the right mix.</p>
+    </div>
+
+    <h3 id="ghc">3.3 Grace Hopper Celebration Male Allies Panels</h3>
+
+    <div class="case-study">
+      <h4>Grace Hopper Celebration (2014&ndash;present)</h4>
+      <div class="case-study-meta">
+        <strong>Organizer:</strong> AnitaB.org &middot;
+        <strong>Scale:</strong> 20,000+ attendees at peak &middot;
+        <strong>Male Attendance:</strong> ~500 in peak in-person years (roughly 2.5&ndash;6%)
+      </div>
+
+      <p>The Grace Hopper Celebration introduced the first-ever Male Allies plenary panel in 2014, bringing C-suite leaders from Google, Facebook, GoDaddy, and Intuit on stage for what turned out to be a controversial but formative session. Marc Benioff of Salesforce delivered a co-keynote with then-U.S. CTO Megan Smith. By 2018, the male allies programming had matured into a moderated 90-minute session featuring Matt Wallaert, Haile Owusu, Wayne Barlow, and Evin Robinson, with a room that reached roughly fifty-fifty gender balance.</p>
+
+      <p>What is instructive about the Grace Hopper arc is the organization's willingness to stay with a difficult format through its early missteps. The 2014 panel received significant criticism; AnitaB.org did not abandon the format but iterated on it. By 2018, attendee feedback centered on language that any organization would hope to hear at its own event: <em>changed perspective</em>, <em>willingness to redirect conversations</em>, <em>commitment to change teams and impact industry</em>.</p>
+    </div>
+
+    <h3 id="rockit">3.4 Louisville Women in Technology Conference (RockIT Women)</h3>
+
+    <div class="case-study">
+      <h4>Annual Women in Technology Conference (2022&ndash;2025)</h4>
+      <div class="case-study-meta">
+        <strong>Organizer:</strong> RockIT Women &middot;
+        <strong>Venue:</strong> Crown Plaza Hotel, Louisville, Kentucky &middot;
+        <strong>Powered by:</strong> Microsoft &middot;
+        <strong>Notable feature:</strong> Annual Male Ally Award
+      </div>
+
+      <p>The Louisville conference made what is arguably the most replicable single design choice in the national landscape: an annual Male Ally Award, publicly conferred, alongside awards for senior women leaders and rising stars. The conference's promotional language&mdash;"hundreds of women plus a few good men"&mdash;does not pretend to equal representation, but it does communicate unambiguous welcome. Men serve on planning committees, participate in volunteer leadership, and are formally recognized for their contributions.</p>
+
+      <p>The mechanism matters. Public recognition reframes male allyship from a private virtue into a visible professional identity. For the Network, this is a pattern worth adopting at smaller scale: an annual recognition of a male ally in Austin technology, named and presented at the first quarterly meeting of each year.</p>
+    </div>
+
+    <h3 id="swe">3.5 Society of Women Engineers: HeForSWE</h3>
+
+    <div class="case-study">
+      <h4>HeForSWE Affinity Group (2018&ndash;present)</h4>
+      <div class="case-study-meta">
+        <strong>Organizer:</strong> Society of Women Engineers &middot;
+        <strong>Membership base:</strong> 50,000+ engineers
+      </div>
+
+      <p>SWE's approach differs from event-driven programs in one important respect: HeForSWE is a year-round affinity group rather than a standalone conference. Programming at the annual WE conference&mdash;including the 2021 session "Leveraging Male Allies to Champion Gender Inclusion and Equity" featuring Dr. Brad Johnson&mdash;builds on ongoing community rather than starting from cold each year. Danny Foody of Project Farma at Purdue, a senior manager and current HeForSWE co-lead, describes his motivation in unusually candid terms for this domain:</p>
+
+      <blockquote>
+        It's clear that women are underrepresented in STEM fields, and especially in leadership positions. I want to be a part of that process and encourage more men to be a champion and an ally.
+        <cite>&mdash; Danny Foody, Senior Manager, Project Farma</cite>
+      </blockquote>
+
+      <p>SWE also addresses, rather than avoids, the psychological barriers that keep men out of allyship work: anti-femininity norms, fear of disapproval from other men, and lack of confidence about "saying the wrong thing." These are not abstract obstacles. They are the reason many male colleagues across Austin tech had not attended the Network's previous meetings, and naming them explicitly was a deliberate choice in the April programming.</p>
+    </div>
+
+    <h3 id="university">3.6 University-Based Programs</h3>
+
+    <p>Three university programs round out the national picture. North Dakota State University's Advocates and Allies program, launched in 2009 with NSF ADVANCE grant funding, offers tiered training&mdash;a two-hour ally session for broad participation, and a more intensive Advocate track for institutional change agents. Nearly 90% of participants reported learning something new. Princeton's Male Allies for Women in STEM seminar draws 100+ graduate students, postdoctoral fellows, faculty, and staff each year, with a follow-on coffee hour for men interested in deeper engagement. Indiana University Bloomington's Advocates and Allies for Equity program, led by Dr. Thomas James of the Department of Psychological and Brain Sciences, offers open sessions on "Engaging Men as Allies."</p>
+
+    <p>The pattern across university programs is the layered design: a broad entry point followed by an opt-in pathway to deeper commitment. For the Network, this suggests that the April event should not be a one-off. It should be the entry point to a smaller, sustained community of Austin men committed to ongoing practice.</p>
+  </section>
+
+  <div class="section-divider">&sect; &sect; &sect;</div>
+
+  <!-- PART II. A TYPOLOGY OF MALE ALLIES -->
+  <section id="austin-panelists">
+    <h2><span class="section-num">Section 4 &middot; Part II</span>A Typology of Male Allies in Austin Technology</h2>
+
+    <p>One finding shaped this section before any of its content. Austin's tech ecosystem has well-documented women-in-tech organizations&mdash;Austin Women in Technology, Latinas in Tech Austin, Girlstart, and Latinitas among them&mdash;but the public record of <em>male</em> executives actively supporting those organizations is thin. This is not necessarily evidence that such men do not exist; more likely, it reflects that quiet support does not generate press coverage, that the public-facing voices of these organizations are appropriately women, and that the ecosystem has not yet developed the habit of naming and celebrating male allies the way Louisville's RockIT Women community has.</p>
+
+    <p>To make this analysis useful beyond a single recruiting cycle&mdash;and to a reader in Chicago or London for whom the names below carry no local meaning&mdash;the Austin examples are organized below into five <em>archetypes</em> of male allyship in technology. The archetypes describe distinct theories of change, distinct sources of credibility, and distinct organizational footprints. They are not mutually exclusive; an effective panel typically draws from at least three. Each archetype is illustrated with one or two Austin leaders whose public records demonstrate the pattern.</p>
+
+    <h3>4.1 Archetype 1 &middot; The Institutional Sponsor</h3>
+
+    <div class="panelist">
+      <span class="tier-marker">Archetype 1</span>
+      <div class="name">The Institutional Sponsor</div>
+      <div class="title">Leverages positional power to change macro-level policy, hiring, and funding</div>
+
+      <h5>Pattern</h5>
+      <p>The Institutional Sponsor is typically a CEO, founder, or senior executive whose contribution to allyship operates at the level of stated targets, capital allocation, and structural HR programs rather than individual mentorship. The signature artifacts are public commitments with numbers attached, multi-year programs the company funds, and corporate partnerships with women-in-tech organizations. The strength of the archetype is reach; its limit is that an Institutional Sponsor's day-to-day visibility to women in the workforce is necessarily mediated by other layers of management.</p>
+
+      <h5>Austin Illustration: Michael Dell</h5>
+      <p>In July 2020, the founder, chairman, and CEO of Dell Technologies publicly called out the technology industry's failure to make adequate progress on diversity and set concrete 2030 targets: 50% of Dell's global workforce and 40% of its global managers to be women. Dell Technologies operates STEMAspire (a 12-month mentoring program for women STEM students) and Dell Career Restart (a return-to-work program for women in technology), and the company has been a consistent partner of Austin Women in Technology. The Michael &amp; Susan Dell Foundation has committed more than $2 billion to education and opportunity programs.</p>
+
+      <h5>Austin Illustration: Brian Reaves</h5>
+      <p>The Chief Diversity and Inclusion Officer at Dell Technologies operationalizes what Michael Dell announces. Reaves leads Dell's MARC (Many Advocating Real Change) program focused on unconscious bias training, oversees the Women in Action ERG and STEMAspire, and manages Dell's diversity recruiting partnerships. The pairing of Dell and Reaves illustrates that the Institutional Sponsor archetype often operates as a leader-and-operator dyad, with the public commitment held at the top and the program execution one or two layers down.</p>
+    </div>
+
+    <h3>4.2 Archetype 2 &middot; The Reformed Advocate</h3>
+
+    <div class="panelist">
+      <span class="tier-marker">Archetype 2</span>
+      <div class="name">The Reformed Advocate</div>
+      <div class="title">Models vulnerability by publicly narrating a late start or past ignorance</div>
+
+      <h5>Pattern</h5>
+      <p>The Reformed Advocate's contribution is rhetorical as much as operational. By describing his own learning journey&mdash;naming what he did not understand, when, and what changed his mind&mdash;he gives other men a structurally similar path to follow. This archetype is unusually valuable in audiences containing senior men who have been silent on equity questions, because his narrative implicitly says that silence is not a permanent condition and that public reflection is professionally survivable. The risk is performative reform without follow-through; the test is whether the narrative is paired with sustained institutional commitments.</p>
+
+      <h5>Austin Illustration: Chris Hyams</h5>
+      <p>Hyams is the former CEO of Indeed, currently serving as Visiting Lecturer and Board Trustee at Huston-Tillotson University, Austin's HBCU. He sits on the board of DivInc, Austin's accelerator for women and people-of-color entrepreneurs, and has served as honorary chair of DivInc's Champions of Change Awards, pledging a $30,000 matching donation in one year. Under his tenure as CEO, Indeed built a dedicated DEIB+ department and was recognized repeatedly by Comparably for diversity practices. He has spoken publicly and unusually candidly about his own learning journey, crediting his wife's Undoing White Supremacy Austin training in 2014 as the beginning of his own education. His current course at Huston-Tillotson&mdash;<em>Responsible AI: Technology, Language, Power, and the Future of Humanity</em>&mdash;extends that work into the next generation of equity questions in technology. Hyams is the rare male leader who discusses his allyship in the language of <em>becoming</em> rather than <em>being</em>.</p>
+    </div>
+
+    <h3>4.3 Archetype 3 &middot; The Ecosystem Builder</h3>
+
+    <div class="panelist">
+      <span class="tier-marker">Archetype 3</span>
+      <div class="name">The Ecosystem Builder</div>
+      <div class="title">Constructs alternative structures and pipelines for marginalized groups</div>
+
+      <h5>Pattern</h5>
+      <p>The Ecosystem Builder concludes that incumbent structures will not produce equitable outcomes within an acceptable time horizon, and responds by building parallel ones&mdash;accelerators, funds, training pipelines, mentorship organizations. The strength of this archetype is verifiability: outcomes are measurable in companies launched, dollars deployed, women hired into specific programs. The limit is that the Builder's work depends on continuous fundraising and organizational sustainability, which exposes the archetype to the same systemic capital biases the underlying programs are built to correct.</p>
+
+      <h5>Austin Illustration: Preston L. James II</h5>
+      <p>James co-founded the first early-stage tech accelerator in Texas focused exclusively on women and people-of-color founders. DivInc's Startup Sistas initiative serves approximately 300 women-of-color entrepreneurs per year; the organization has helped launch 55+ companies and has since expanded nationally through the Social Justice Innovation Accelerator. James spent 20 years at Dell before founding DivInc, a hybrid background that lets him speak credibly to both the corporate and startup sides of any audience. As a Black male ally, he also brings an intersectional perspective that purely corporate framings of allyship tend to underweight.</p>
+    </div>
+
+    <h3>4.4 Archetype 4 &middot; The Intersectional Innovator</h3>
+
+    <div class="panelist">
+      <span class="tier-marker">Archetype 4</span>
+      <div class="name">The Intersectional Innovator</div>
+      <div class="title">Ties gender equity to adjacent systemic issues&mdash;AI ethics, racial justice, labor</div>
+
+      <h5>Pattern</h5>
+      <p>The Intersectional Innovator's contribution is to refuse the framing of gender equity as a self-contained HR question. By tying the work to AI ethics, racial justice, labor economics, or product design, this archetype makes the case that diverse hiring is a core engineering and product question rather than a peripheral compliance one. The strength is durability: an Intersectional Innovator's framing tends to date less quickly than conventional diversity commentary, because the technical questions it addresses are still being shaped. The risk is breadth without depth; effective Innovators are paired on panels with operators who can speak to specific organizational practice.</p>
+
+      <h5>Austin Illustration: Will Griffin</h5>
+      <p>As Chief Ethics Officer at Hypergiant Industries, Griffin developed the company's company-wide AI ethics and diversity framework and has been a consistent public advocate for diverse hiring and funding in technology. His career spans Goldman Sachs, McKinsey &amp; Co., and media entrepreneurship, and he holds a JD from Harvard Law School. He has won an NAACP Image Award for his work. As an industry grapples with the consequences of building AI systems on non-diverse teams, his framing&mdash;that diverse hiring is a core engineering and product question&mdash;has unusually long shelf life.</p>
+    </div>
+
+    <h3>4.5 Archetype 5 &middot; The Local Convener</h3>
+
+    <div class="panelist">
+      <span class="tier-marker">Archetype 5</span>
+      <div class="name">The Local Convener</div>
+      <div class="title">Opens channels across company lines in a local ecosystem</div>
+
+      <h5>Pattern</h5>
+      <p>The Local Convener's work happens in the spaces <em>between</em> companies rather than inside any single one. Professional advancement runs on introductions, referrals, speaking invitations, board seats, and trust networks that cross organizational lines; men who operate those networks can either reproduce the existing homogeneity of who-knows-whom or deliberately open new channels. The Convener's contribution is not policy or program, but repeated small acts of inclusion at the ecosystem level: who gets introduced to whom, which voices get platformed, which women's work gets circulated beyond the room it started in. The strength of the archetype is reach without requiring formal authority over any one company's hiring; the limit is that the work depends on sustained attention and cannot be delegated.</p>
+
+      <h5>Austin Illustration: Thom Singer</h5>
+      <p>As CEO of the Austin Technology Council, Singer leads Austin's largest technology industry organization, which partners directly with Austin Women in Technology. He is co-author, with Marny Lifshen, of <em>Some Assembly Required: A Networking Guide for Women</em>, now in its second edition&mdash;a book explicitly about how professional networking functions differently for women and how to give men a window into what their female colleagues navigate daily. His stated working philosophy, <em>all opportunities come from people</em>, is the Convener archetype in compressed form. Singer anchored the April 2026 fireside chat and authored <em>The History of Austin Tech</em>, a piece that appeared on the Austin Women in Technology platform.</p>
+
+      <h5>Austin Illustration: Balazs Barna</h5>
+      <p>As Head of US Engineering and Austin Site Lead at Wise, Barna leads a 200-person Austin office and has publicly emphasized building diverse teams across all functions. He serves on the board of the Austin Technology Council&mdash;the same body Singer runs&mdash;placing him at the node where cross-company Austin tech convening actually happens. Barna's value in this archetype is hybrid: he does the within-company work of a mid-level engineering leader (hiring, sponsorship, promotion decisions at scale) and simultaneously participates in the cross-company convening infrastructure. That hybrid is also what makes him representative of the demographic the April meeting was designed to reach: the engineering and operational leadership layer where most everyday allyship is either enacted or undermined.</p>
+    </div>
+
+    <h3>4.6 Building a Panel from the Typology</h3>
+
+    <p>A panel that draws from at least three of the five archetypes tends to outperform a panel drawn from one. The reasoning is mechanical: each archetype answers a different question audience members bring to the room. The Institutional Sponsor answers <em>does this matter at the top?</em> The Reformed Advocate answers <em>can someone like me start now?</em> The Ecosystem Builder answers <em>does anything actually work?</em> The Intersectional Innovator answers <em>is this still relevant in five years?</em> The Local Convener answers <em>can this happen one connection at a time?</em> A panel that addresses fewer than three of those questions leaves substantial parts of the audience unmet.</p>
+
+    <p>For organizations outside Austin adapting this typology, the practical exercise is to identify one local exemplar of each archetype using the same kinds of public sources that surfaced the Austin examples above: corporate diversity announcements with numbers attached (Sponsor), candid public talks or interviews about a personal learning journey (Reformed Advocate), board listings and press coverage of accelerators or pipeline programs (Ecosystem Builder), AI ethics or labor coverage that names individual male leaders (Intersectional Innovator), and leadership of local industry councils, professional associations, or cross-company convening bodies (Local Convener). Where the local public record is thin&mdash;as it was for several Austin employers including Tesla, AMD, SHI International, Microsoft, Amazon, and Google&mdash;the recommended next step is direct outreach to the HR or diversity function at each company, asking specifically for the name of a male executive who sponsors the Women in Technology ERG or has been internally recognized for allyship.</p>
+  </section>
+
+  <div class="section-divider">&sect; &sect; &sect;</div>
+
+  <!-- PART III. SUCCESS FACTORS -->
+  <section id="success-factors">
+    <h2><span class="section-num">Section 5 &middot; Part III</span>Cross-Case Success Factors</h2>
+
+    <p>Across the programs reviewed in Part I, eight patterns recur with enough consistency to qualify as design principles rather than options. They appear here in rough order of the magnitude of effect observed in the data.</p>
+
+    <div class="finding-box">
+      <div class="finding-label">Finding 1 &middot; Highest-Leverage Intervention</div>
+      <h4>Personal invitation drives male attendance at gender-focused events</h4>
+      <p>In Wallaert's survey of 400 men, 40% of male attendees cited an explicit personal invitation from a colleague as the key factor in their decision to attend. An additional 16% of non-attendees specifically cited not feeling invited as their reason for staying away. The distinction here is between a broadcast email (low effect) and a direct message from a specific colleague that names a specific reason (high effect). Of all the interventions surveyed, this is the single highest-leverage one available to a local network running a quarterly meeting.</p>
+    </div>
+
+    <div class="finding-box">
+      <div class="finding-label">Finding 2</div>
+      <h4>Male panelists signal that the event seeks men's participation, not their attendance as spectators</h4>
+      <p>Roughly 20% of male attendees in the same survey cited the presence of at least one male speaker as an important factor in their decision. The mechanism is not flattery. It is a practical signal that the event expects men to contribute rather than observe. The Network's experimental all-male format directly addresses this signal.</p>
+    </div>
+
+    <div class="finding-box">
+      <div class="finding-label">Finding 3</div>
+      <h4>Explicit welcoming language reduces a documented psychological barrier</h4>
+      <p>Catalyst's research on "inhibiting pressures" identifies specific barriers men report facing when considering participation in diversity events: fear of appearing performative, uncertainty about whether their attendance is wanted, and worry about saying the wrong thing. Events that used explicit language&mdash;"male allies welcome," "open to all genders committed to this work"&mdash;measurably outperformed those that did not. Registration pages and email communications for the Network's April meeting adopted this language consistently.</p>
+    </div>
+
+    <div class="finding-box">
+      <div class="finding-label">Finding 4</div>
+      <h4>Business-case framing recruits senior leadership; moral framing sustains them</h4>
+      <p>Every successful program reviewed for this brief opened with a business-case argument&mdash;retention costs, innovation outcomes, competitive positioning&mdash;and moved toward moral framing only after credibility had been established. This is not cynicism; it is sequencing. For an Austin tech audience, the retention data is particularly relevant: replacing a mid-level engineer in the local market typically costs 1.5 to 2 times annual salary, and women engineers leave the industry at roughly twice the rate of men.</p>
+    </div>
+
+    <div class="finding-box">
+      <div class="finding-label">Finding 5</div>
+      <h4>Action-oriented content outperforms awareness-building content</h4>
+      <p>Participants in MARC's scenario-based workshops&mdash;where men practice specific interventions in plausible workplace situations&mdash;reported substantially higher satisfaction and post-event behavior change than participants in lecture-format diversity trainings. The practical implication for any two-hour quarterly meeting is that the majority of the time should be spent on <em>what to do</em>, not <em>why it matters</em>.</p>
+    </div>
+
+    <div class="finding-box">
+      <div class="finding-label">Finding 6</div>
+      <h4>Research-backed content creates shareable credibility</h4>
+      <p>The IWL Summit's partnership with Harvard Business Review gave attendees something to cite in their own organizations. Content that can be referenced by name ("a 2022 HBR study found...") travels further than content that cannot. The practical implication is to select two or three research findings and repeat them consistently across pre-event materials, the panel discussion itself, and post-event follow-up.</p>
+    </div>
+
+    <div class="finding-box">
+      <div class="finding-label">Finding 7</div>
+      <h4>Senior leadership visibility provides organizational permission</h4>
+      <p>Mid-level managers at Grace Hopper, IWL, and the Women in Manufacturing conference consistently reported that the visible participation of C-suite leaders gave them permission to engage publicly. The implication for recruitment: even if a senior executive cannot commit to the full two hours, a recorded five-minute opening or a prominent name on invitation materials produces outsized effect.</p>
+    </div>
+
+    <div class="finding-box">
+      <div class="finding-label">Finding 8</div>
+      <h4>Integration outperforms isolation</h4>
+      <p>The male allyship sessions that worked best were embedded in larger women-focused conferences rather than held as standalone men-only events. The Network's chosen format&mdash;an all-male presence within an ongoing quarterly Impact Network cadence&mdash;is aligned with this principle, and any pressure to spin off a separate men's track should be resisted.</p>
+    </div>
+  </section>
+
+  <div class="section-divider">&sect; &sect; &sect;</div>
+
+  <!-- PART IV. THE PROGRAM RUN -->
+  <section id="recommendation">
+    <h2><span class="section-num">Section 6 &middot; Part IV</span>The Meeting As Run</h2>
+
+    <p>Drawing on the national case studies and cross-case findings above, the planning committee made a series of design choices for the April 2026 meeting. They are described here as a record of what was actually run, rather than as forward-looking recommendations.</p>
+
+    <h3>6.1 Positioning and Tone</h3>
+    <p>The meeting was titled <em>Male Allyship Panel Discussion</em> and positioned from the opening frame as <em>forward-looking and solutions-oriented&mdash;a strategy session, not a grievance session</em>. That framing was carried through the invitation, the moderator's opening, and the question design: the conversation was aimed at men who wanted practical guidance and women who wanted candid answers about what their male colleagues were actually doing, rather than at producing a catalogue of workplace grievances.</p>
+
+    <h3>6.2 Format: Lunch or Evening?</h3>
+    <p>The committee discussed moving to an evening format. After reviewing the evidence, the lunch format was retained for this specific meeting, for three reasons:</p>
+    <ul>
+      <li><strong>During-work-hours attendance</strong> frames the event as professional development rather than personal commitment, reducing a documented barrier for the male managers most likely to be in scope.</li>
+      <li><strong>Parents of young children</strong> (men and women alike) face a harder logistical hurdle in the evening than at midday.</li>
+      <li><strong>Quarterly cadence</strong> has built brand recognition as a lunch event; changing the format and the topic simultaneously introduces two variables at once, which complicates the committee's ability to learn from the result.</li>
+    </ul>
+    <p>The evening question is open for a subsequent quarter, once baseline attendance data from April has been analyzed.</p>
+
+    <h3>6.3 Agenda As Run</h3>
+
+    <p>The meeting format evolved from the originally proposed all-male workshop panel into a moderated fireside chat: a single panelist&mdash;Thom Singer, CEO of the Austin Technology Council&mdash;in conversation with co-lead Mark Garcia, organized around thirteen questions grouped into four thematic sections. Total runtime was approximately 50&ndash;55 minutes, with the balance of the lunch hour reserved for networking, registration, and meal service. The tone set at the outset was <em>forward-looking and solutions-oriented&mdash;a strategy session, not a grievance session</em>.</p>
+
+    <table class="agenda-table">
+      <thead>
+        <tr><th>Time</th><th>Segment</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>5 min</td>
+          <td>Opening &mdash; Setting the stage</td>
+          <td>Welcome, framing of the fireside chat format, introduction of the panelist, and statement of the discussion's tone and intent.</td>
+        </tr>
+        <tr>
+          <td>10&ndash;12 min</td>
+          <td>Section 1 &mdash; The Male Mindset</td>
+          <td>Three questions on where men in tech are today: the common mindset (resistance, indifference, or good intentions without a roadmap), the awareness gap for barriers men have not themselves navigated, and moving from hesitation to action.</td>
+        </tr>
+        <tr>
+          <td>12&ndash;15 min</td>
+          <td>Section 2 &mdash; Allyship in Tech</td>
+          <td>Four questions on what allyship actually looks like in practice: opportunities come from people (hiring, meetings, promotion); credit attribution when a woman's idea is repeated by a man; what separates companies where women genuinely advance; and the move from mentor to sponsor.</td>
+        </tr>
+        <tr>
+          <td>8&ndash;10 min</td>
+          <td>Section 3 &mdash; The Personal Stakes</td>
+          <td>Three questions on why men should care: a father's lens (the panelist is father to two daughters), the hard business case for the skeptical businessman, and Human Interaction as competitive advantage in an AI-driven world.</td>
+        </tr>
+        <tr>
+          <td>8 min</td>
+          <td>Section 4 &mdash; The Austin Ecosystem</td>
+          <td>Three questions on local accountability: representation at the leadership level in Austin tech, reflections on <em>The History of Austin Tech</em> (Singer's piece that appeared on the Austin Women in Technology platform), and one concrete action every man in the room could take that week.</td>
+        </tr>
+        <tr>
+          <td>13&ndash;18 min</td>
+          <td>Q&amp;A and Closing</td>
+          <td>Audience questions, the closing prompt to the panelist ("the one mindset change or behavior that would move the needle most for men in technology"), and distribution of the recommended reading list&mdash;<em>Good Guys</em>, <em>Better Allies</em> (2nd ed.), and Singer &amp; Lifshen's <em>Some Assembly Required</em> (2nd ed.).</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>6.4 Recommended Reading Distributed at Close</h3>
+    <p>A short, focused reading list was shared with attendees at the close of the discussion, selected for practical utility rather than exhaustiveness:</p>
+    <ul>
+      <li><strong><em>Good Guys</em></strong> by W. Brad Johnson &amp; David G. Smith&mdash;an evidence-based playbook covering hiring, meetings, sponsorship, and confronting bias. The most concrete of the three for men seeking specific guidance.</li>
+      <li><strong><em>Better Allies</em> (2nd ed.)</strong> by Karen Catlin&mdash;a tech-focused guide defining seven ally archetypes (Sponsor, Champion, Amplifier, Advocate, Scholar, Confidant, Upstander). Immediately actionable and the natural companion to the five archetypes presented in Part II of this brief.</li>
+      <li><strong><em>Some Assembly Required</em> (2nd ed.)</strong> by Thom Singer &amp; Marny Lifshen&mdash;the panelist's own book, co-authored with an Austin marketing consultant. Explores how professional networking differs for women and gives men a window into what their female colleagues navigate daily.</li>
+    </ul>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section id="conclusion">
+    <h2><span class="section-num">Section 7</span>Conclusion</h2>
+
+    <p>The evidence base on male allyship in technology is more mature than it might appear on first inspection, and the consistency of the findings across organizations is reassuring: the design decisions any local network faces are well-characterized. The gap between male intent (97% want to close gender gaps) and male action (roughly 10% attending events of this kind) is not a gap of values. It is a gap of invitation, framing, and practice.</p>
+
+    <p>A single quarterly meeting cannot close that gap on its own. What it can do is begin a sustained practice in the Austin ecosystem of inviting men into this work by name and offering them concrete tools rather than abstract commitments. The April 2026 fireside chat was a first touch. If it also seeds an ongoing community of Austin male allies who continue to show up in July and October&mdash;and who begin to recognize themselves in one or more of the five archetypes described in Part II&mdash;it will have built something more valuable than any single meeting.</p>
+
+    <p>This brief was, and remains, a working document. Feedback from the planning committee, the sponsor, and the broader community is welcome on any element of the framework presented here.</p>
+  </section>
+
+  <!-- REFERENCES -->
+  <section id="references">
+    <h2><span class="section-num">Section 8</span>References &amp; Source Notes</h2>
+
+    <div class="references">
+      <p>The following sources informed this brief. URLs were accurate as of the date of writing.</p>
+
+      <ol>
+        <li>Catalyst. (2025). <em>Women's Advancement Through Workplace Inclusion</em> (Annual CEO Letter). <a href="https://www.catalyst.org/about/stories/2025/annual-ceo-letter">catalyst.org/about/stories/2025/annual-ceo-letter</a></li>
+
+        <li>Allyship Initiative. (2022). <em>2022 ALL IN Allyship Summit</em>. <a href="https://allyshipinitiative.org/2022-iwl-all-in-virtual-allyship-summit/">allyshipinitiative.org/2022-iwl-all-in-virtual-allyship-summit</a></li>
+
+        <li>Integrating Women Leaders Foundation. (2022). <em>State of Allyship-in-Action Research Study Results</em>. <a href="https://iwlfoundation.org/all-in-allyship/">iwlfoundation.org/all-in-allyship</a></li>
+
+        <li>Women in Manufacturing. (2025). <em>2025 Men as Allies Conference</em>. <a href="https://www.womeninmanufacturing.org/news/men-as-allies2025">womeninmanufacturing.org/news/men-as-allies2025</a></li>
+
+        <li>Products Finishing. (2025). <em>Inaugural Men as Allies Conference Takes Place February 2025</em>. <a href="https://www.pfonline.com/news/inaugural-men-as-allies-conference-takes-place-february-2025">pfonline.com/news/inaugural-men-as-allies-conference-takes-place-february-2025</a></li>
+
+        <li>NPR. (2023). <em>'You could feel the cutthroatness': Droves of men took over this women's tech fair</em>. <a href="https://www.npr.org/2023/10/05/1203845886/women-tech-conference-men-grace-hopper">npr.org/2023/10/05/1203845886/women-tech-conference-men-grace-hopper</a></li>
+
+        <li>AnitaB.org. <em>Male Allies Archives &mdash; Grace Hopper Celebration</em>. <a href="https://ghc.anitab.org/tag/male-allies/">ghc.anitab.org/tag/male-allies</a></li>
+
+        <li>Hilton, T. (2018). <em>Thoughts on Grace Hopper Celebration 2018</em>. <a href="https://todhilton.com/words/gracehopper/">todhilton.com/words/gracehopper</a></li>
+
+        <li>Wallaert, M. <em>#WhyMenAttend gender-focused events</em>. <a href="https://mattwallaert.com/whymenattend/">mattwallaert.com/whymenattend</a></li>
+
+        <li>SHRM. <em>Grace Hopper ABC's for Men</em>. <a href="https://blog.shrm.org/blog/grace-hopper-abc-s-for-men">blog.shrm.org/blog/grace-hopper-abc-s-for-men</a></li>
+
+        <li>RockIT Women. <em>Annual Women in Tech Louisville Conference</em>. <a href="https://rockitwomen.com/wit-conference">rockitwomen.com/wit-conference</a></li>
+
+        <li>Society of Women Engineers. <em>Male Allies Must Focus on the Details to Help Women Succeed</em>. <a href="https://swe.org/magazine/male-allies-focus-on-details/">swe.org/magazine/male-allies-focus-on-details</a></li>
+
+        <li>Forte Foundation. <em>New Men As Allies Initiative Helps Men Navigate and Benefit From Gender Equity Involvement</em>. <a href="https://business360.fortefoundation.org/new-men-as-allies-initiative-helps-men-navigate-and-benefit-from-gender-equity-involvement/">business360.fortefoundation.org</a></li>
+
+        <li>ICAN. <em>Male Allyship</em>. <a href="https://icanleaders.org/programs/male-allyship/">icanleaders.org/programs/male-allyship</a></li>
+
+        <li>NC TECH. (2025). <em>Allyship In Action</em>. <a href="https://www.nctech.org/events/event/2025/allyship-in-action.html">nctech.org/events/event/2025/allyship-in-action.html</a></li>
+
+        <li>Utah Business. <em>Dell made an effort to step up their diversity efforts last year</em>. <a href="https://www.utahbusiness.com/learning-from-dell-diversity/">utahbusiness.com/learning-from-dell-diversity</a></li>
+
+        <li>IndustryWeek. <em>Dell Aims to Make Women Half of Workforce in Diversity Push</em>. <a href="https://www.industryweek.com/talent/article/22028573/dell-aims-to-make-women-half-of-workforce-in-diversity-push">industryweek.com/talent/article/22028573</a></li>
+
+        <li>DivInc. <em>Agent of Change: Chris Hyams</em>. <a href="https://www.divinc.org/blog/agent-of-change-chris-hyams">divinc.org/blog/agent-of-change-chris-hyams</a></li>
+
+        <li>Silicon Hills News. (2022). <em>DivInc Honors its 2022 Champions of Change Award Winners</em>. <a href="https://www.siliconhillsnews.com/2022/03/04/divinc-reveals-its-2022-champions-of-change-awards/">siliconhillsnews.com</a></li>
+
+        <li>Axios Austin. (2022). <em>Diversity in tech: 5 questions with Preston James</em>. <a href="https://www.axios.com/local/austin/2022/03/07/diversity-in-tech-austin-questions-answers-preston-james">axios.com/local/austin/2022/03/07/diversity-in-tech-austin-questions-answers-preston-james</a></li>
+
+        <li>Built In Austin. <em>A Black Tech Ethicist Talks Next Steps for ATX's Tech Community</em>. <a href="https://www.builtinaustin.com/articles/will-griffin-hypergiant-austin-tech-diversity">builtinaustin.com/articles/will-griffin-hypergiant-austin-tech-diversity</a></li>
+
+        <li>Austin Technology Council. <em>Austin Women in Technology</em>. <a href="https://www.austintechnologycouncil.org/austin-women-in-technology/">austintechnologycouncil.org/austin-women-in-technology</a></li>
+      </ol>
+
+      <p><em>Note: A small number of additional sources were consulted for verification of specific facts (titles, dates, role changes) and are omitted from the primary reference list above for readability. Full source tracking is available upon request from the author.</em></p>
+    </div>
+  </section>
+
+  <footer class="article-footer">
+    &copy; 2026 &middot; Austin Women in Tech Impact Network &middot; Research Brief Vol. I, No. 1<br>
+    <a href="#top" class="back-to-top">&uarr; Back to top</a> &middot; <a href="index.html" class="back-to-top">Home</a>
+  </footer>
+
+</article>
+
+</body>
+</html>
